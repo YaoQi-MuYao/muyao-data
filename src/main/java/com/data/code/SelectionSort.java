@@ -49,9 +49,49 @@ public class SelectionSort {
         int N = arr.length;
         for (int end = N - 1; end >= 0; end--) {
             for (int second = 1; second < end; second++) {
-                if (arr[second -1] > arr[second]) {
-                    swap(arr, second -1 , second);
+                if (arr[second - 1] > arr[second]) {
+                    swap(arr, second - 1, second);
                 }
+            }
+        }
+    }
+
+    /***
+     * 插入排序
+     *
+     * @author muyao
+     * @date 2022/6/15 18:07
+     * @param arr 无序数组
+     **/
+    public static void insertSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        int N = arr.length;
+        for (int end = 1; end < N; end++) {
+            int newNumIndex = end;
+            while (newNumIndex - 1 >= 0 && arr[newNumIndex - 1] > arr[newNumIndex]) {
+                swap(arr, newNumIndex - 1, newNumIndex);
+                newNumIndex--;
+            }
+        }
+    }
+
+    /***
+     * 插入排序 优化方法
+     *
+     * @author muyao
+     * @date 2022/6/15 18:07
+     * @param arr 无序数组
+     **/
+    public static void insertSort2(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        int N = arr.length;
+        for (int end = 1; end < N; end++) {
+            for (int pre = end - 1; pre > 0 && arr[pre] > arr[pre + 1]; pre--) {
+                swap(arr, pre, pre + 1);
             }
         }
     }

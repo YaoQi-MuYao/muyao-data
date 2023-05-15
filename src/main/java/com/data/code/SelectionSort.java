@@ -56,7 +56,7 @@ public class SelectionSort {
         }
     }
 
-    /***
+    /**
      * 插入排序
      *
      * @author muyao
@@ -77,7 +77,7 @@ public class SelectionSort {
         }
     }
 
-    /***
+    /**
      * 插入排序 优化方法
      *
      * @author muyao

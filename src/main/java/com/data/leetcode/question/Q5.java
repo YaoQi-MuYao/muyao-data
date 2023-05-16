@@ -49,7 +49,6 @@ public class Q5 {
         return max;
     }
 
-
     /***
       * 移动队列
       * @author muyao
